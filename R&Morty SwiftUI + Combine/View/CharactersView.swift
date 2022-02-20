@@ -21,7 +21,7 @@ struct CharactersView: View {
 
     private var filterName: String {
         guard !viewModel.filter.tags.isEmpty else { return "All characters" }
-
+        // if flter is applied
         return "Filtered characters"
     }
 
@@ -63,6 +63,7 @@ struct CharactersView: View {
                                     Button("Filter") {
                 self.filterSettingsIsPresented.toggle()
             }
+                                //change color in dark mode
             .foregroundColor(self.colorScheme == .light ? .blue : .orange)
             )
         }
